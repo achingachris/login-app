@@ -2,7 +2,8 @@ import React from 'react'
 import { Image, StyleSheet } from 'react-native'
 
 export default function Logo() {
-  return <Image source={require('../assets/logo.png')} style={styles.image} />
+  // eslint-disable-next-line prettier/prettier
+  return <Image source={require('../assets/asn-luminous-no-bg.png')} style={styles.image} />
 }
 
 const styles = StyleSheet.create({

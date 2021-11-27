@@ -9,10 +9,10 @@ export default function Dashboard({ navigation }) {
   return (
     <Background>
       <Logo />
-      <Header>Let’s start</Header>
+      <Header>Let’s Fly</Header>
+      {/* eslint-disable-next-line prettier/prettier */}
       <Paragraph>
-        Your amazing app starts here. Open you favorite code editor and start
-        editing this project.
+        Something Great
       </Paragraph>
       <Button
         mode="outlined"
@@ -23,7 +23,7 @@ export default function Dashboard({ navigation }) {
           })
         }
       >
-        Logout
+        Fly Away
       </Button>
     </Background>
   )

@@ -1,4 +1,5 @@
 export function nameValidator(name) {
-  if (!name) return "Name can't be empty."
+  // eslint-disable-next-line prettier/prettier
+  if (!name) return "Name Please"
   return ''
 }

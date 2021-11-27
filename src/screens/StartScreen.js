@@ -9,21 +9,22 @@ export default function StartScreen({ navigation }) {
   return (
     <Background>
       <Logo />
-      <Header>Login Template</Header>
+      <Header>airSpace Next</Header>
+      {/* eslint-disable-next-line prettier/prettier */}
       <Paragraph>
-        The easiest way to start with your amazing application.
+        A flying Dream
       </Paragraph>
       <Button
         mode="contained"
         onPress={() => navigation.navigate('LoginScreen')}
       >
-        Login
+        Check In
       </Button>
       <Button
         mode="outlined"
         onPress={() => navigation.navigate('RegisterScreen')}
       >
-        Sign Up
+        Reserve Account
       </Button>
     </Background>
   )
