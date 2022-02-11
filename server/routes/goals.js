@@ -17,4 +17,4 @@ router.delete('/:id', (req, res) => {
   res.status(200).json({ message: `delete goal ${req.params.id}` })
 })
 
-modulde.exports = router
+module.exports = router
