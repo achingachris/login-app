@@ -2,7 +2,7 @@ const getGoals = (req, res) => {
   res.status(200).json({ message: 'get goals' })
 }
 
-const setGoals = (req, res) => {
+const setGoal = (req, res) => {
   res.status(200).json({ message: 'set goals' })
 }
 
@@ -16,7 +16,7 @@ const deleteGoal = (req, res) => {
 
 module.exports = {
   getGoals,
-  setGoals,
+  setGoal,
   updateGoal,
   deleteGoal,
 }
