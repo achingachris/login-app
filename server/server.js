@@ -1,10 +1,15 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
 const app = express()
+const colors = require('colors')
+const connectDB = require('./config/db')
 const { errorHandler } = require('./middleware/errorMiddleware')
 
 const port = process.env.PORT || 5500
 const enviroment = process.env.NODE_ENV || 'development'
+
+// CONNECT TO DB
+connectDB()
 
 // MIDDLEWARE
 app.use(express.json())
