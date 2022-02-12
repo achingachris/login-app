@@ -1,9 +1,14 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
 const app = express()
+const { errorHandler } = require('./middleware/errorMiddleware')
 
 const port = process.env.PORT || 5500
 const enviroment = process.env.NODE_ENV || 'development'
+
+// MIDDLEWARE
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 
 // SAMPLE API ROUTE
 app.get('/api/test', (req, res) => {
@@ -12,6 +17,9 @@ app.get('/api/test', (req, res) => {
 
 // API ROUTE FOR GETTING GOALS
 app.use('/api/goals', require('./routes/goals'))
+
+// ERROR MIDDLEWARE
+app.use(errorHandler)
 
 // dotenv.config()
 app.listen(port, () =>

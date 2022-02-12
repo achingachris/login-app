@@ -3,6 +3,11 @@ const getGoals = (req, res) => {
 }
 
 const setGoal = (req, res) => {
+  if (!req.body.text) {
+    res.status(400)
+    throw new Error('Missing text')
+  }
+
   res.status(200).json({ message: 'set goals' })
 }
 
