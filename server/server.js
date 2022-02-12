@@ -20,8 +20,11 @@ app.get('/api/test', (req, res) => {
   res.status(200).json({ message: 'Test API response working' })
 })
 
-// API ROUTE FOR GETTING GOALS
+// API ROUTE FOR  GOALS
 app.use('/api/goals', require('./routes/goals'))
+
+// API ROUTE FOR  USERS
+app.use('/api/users', require('./routes/users'))
 
 // ERROR MIDDLEWARE
 app.use(errorHandler)

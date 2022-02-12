@@ -1,6 +1,6 @@
 # MERN STACK
 
-## Running server
+## Running server (backend)
 
 Install Packages
 
@@ -9,3 +9,10 @@ Install Packages
 Run Server
 
     $ yarn run server
+
+
+## JWT
+
+jwt.io
+
+For authentication
