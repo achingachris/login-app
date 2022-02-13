@@ -62,8 +62,15 @@ const authenticateUser = asyncHandler(async (req, res) => {
 })
 
 // get user's data
+// private route
 const getUserData = asyncHandler(async (req, res) => {
-  res.json({ message: 'Get user Data' })
+  const { _id, name, email } = await User.findById(req.user.id)
+
+  res.status(200).json({
+    id: _id,
+    name: name,
+    email: email,
+  })
 })
 
 // generate token
